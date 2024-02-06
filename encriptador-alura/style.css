@@ -1,0 +1,54 @@
+body{
+    margin:0;
+    padding: 0;
+    background: #F4ECF7;
+}
+header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.logo{
+    width: 120px;
+    height: 48px;
+}
+.sections-mensajes{
+    display: flex;
+    justify-content: space-around;
+}
+.section-encriptar{
+    width: 100%;
+    padding: 20px;
+}
+.encriptar-mensaje{
+    width: 900px;
+    height: 80%;
+}
+
+.buttons{
+    width: 680px;
+    height: 67px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn-encriptar, .btn-desencriptar {
+    width: 328px;
+    height: 67px;
+    border-radius:24px;
+    background-color: #581845;
+    color:white;
+}
+.btn-desencriptar{
+    background-color: #58184588;
+}
+.section-desencriptar{
+    width:400px;
+    height:600px;
+
+}
+.desencriptar-mensaje{
+    width: 80%;
+    height: 30%;
+}
