@@ -20,11 +20,16 @@
         <div class="sections-mensajes">
             <section class="section-encriptar">
                 <textarea class="encriptar-mensaje" placeholder="Ingrese el texto aqui"></textarea>
-                <div class="buttons">
-                    <span>Solo letras minúsculas y sin acentos</span>
-                    <button class="btn-encriptar">Encriptar</button>
-                    <button class="btn-desencriptar">Desencriptar</button>
+                <div class="content-buttons">
+                    <div>
+                        <span>Solo letras minúsculas y sin acentos</span>
+                    </div>
+                    <div class="buttons">
+                        <button class="btn-encriptar">Encriptar</button>
+                        <button class="btn-desencriptar">Desencriptar</button>
+                    </div>
                 </div>
+               
             </section>
             <section class="section-desencriptar">
                 <div class="no-mensaje">
@@ -32,7 +37,11 @@
                     <p class="mensaje-no-encontrado">Ningún mensaje fue encontrado</p>
                     <p class="mensaje-instrucciones">Ingresa el texto que desees encriptar o desencriptar.</p>
                 </div>
-                <textarea class="desencriptar-mensaje"></textarea>
+                <div class="resultado-encriptado" hidden>
+                    <textarea class="desencriptar-mensaje"></textarea>
+                    <button class="btn-copiar">Copiar</button>
+                </div>
+                
             
             </section>
         </div>
