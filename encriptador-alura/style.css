@@ -25,7 +25,7 @@ header{
 }
 .section-encriptar textarea{
     width: 100%;
-    height: 70%;
+    height: 65%;
     background: #F4ECF7;
     border-color: #F4ECF7;
     resize: none;
@@ -42,6 +42,10 @@ header{
     width: 100%;
     height: 80%;
 }
+.content-buttons{
+    display: flex;
+    flex-direction: column;
+}
 
 .buttons{
     width: 680px;
@@ -55,11 +59,11 @@ header{
     width: 328px;
     height: 67px;
     border-radius:24px;
-    background-color: #581845;
+    background: #581845;
     color:white;
 }
 .btn-desencriptar{
-    background-color: #58184588;
+    background: #58184588;
 }
 .section-desencriptar{
     width:400px;
@@ -67,20 +71,11 @@ header{
 
 }
 .no-mensaje{
-    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
-.desencriptar-mensaje{
-    width: 80%;
-    height: 70%;
-    display: none;
-    border-radius: 20px;
-    resize: none;
-    padding: 20px;
-    font-size: 20px;
-}
+
 .mensaje-no-encontrado{
     font-weight: bold;
     font-size: 24px;
@@ -90,4 +85,26 @@ header{
     font-size: 16px;
     color:#58184588;
     text-align: center;
+}
+.resultado-encriptado{
+    width: 100%;
+    height: 90%;
+    flex-direction: column;
+    place-items: center;
+    gap: 16px;
+}
+.desencriptar-mensaje{
+    width: 80%;
+    height: 100%;
+    border-radius: 20px;
+    resize: none;
+    padding: 20px;
+    font-size: 20px;
+}
+.btn-copiar{
+    width: 328px;
+    height: 67px;
+    border-radius:24px;
+    background: #58184588;
+    color:white;
 }
