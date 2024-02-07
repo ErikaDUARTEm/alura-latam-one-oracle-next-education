@@ -66,9 +66,20 @@ header{
     height:600px;
 
 }
+.no-mensaje{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
 .desencriptar-mensaje{
     width: 80%;
-    height: 30%;
+    height: 70%;
+    display: none;
+    border-radius: 20px;
+    resize: none;
+    padding: 20px;
+    font-size: 20px;
 }
 .mensaje-no-encontrado{
     font-weight: bold;
