@@ -45,6 +45,16 @@ header{
 .content-buttons{
     display: flex;
     flex-direction: column;
+    gap:2px;
+}
+.mensajeInfor{
+    color:#58184588;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+    font-weight: bold;
 }
 
 .buttons{
