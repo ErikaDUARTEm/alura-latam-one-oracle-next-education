@@ -20,6 +20,7 @@ function encriptado() {
     if (mensaje === '') {
         noMensaje.style.display = 'flex';
         contenedorEncriptado.style.display = 'none';
+       
     } else {
         const regex = /[A-ZÁÉÍÓÚÜÑáéíóúüñ0-9!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/
 
@@ -27,8 +28,7 @@ function encriptado() {
             contenedorEncriptado.style.display = 'none';
             mensajeInf.style.color= 'red';
             noMensaje.style.display = 'flex';
-            
-        alert('El input no debe contener mayúsculas, números o caracteres especiales.');
+            mensajeInf.style.fontSize = '20px';
         
         }else{
             let mEncriptado = '';
@@ -75,6 +75,7 @@ function replacer(match) {
 
 function desencriptado (){
     const mensaje = msje.value;
+    textareaResultado.blur()
     let mDesencriptado = '';
     if (mensaje === '') {
         noMensaje.style.display = 'flex';
@@ -89,11 +90,11 @@ function desencriptado (){
                     }
                    
             }
-            console.log(mDesencriptado)
             mensajeVisualizado = mDesencriptado;
-            textareaResultado.textContent = mensajeVisualizado;
-            noMensaje.style.display = 'none';
             contenedorEncriptado.style.display = 'flex';
+            textareaResultado.value = mensajeVisualizado;
+            noMensaje.style.display = 'none';
+           
     
 }
 
@@ -106,7 +107,7 @@ btnCopiar.addEventListener('click', copiarMensaje)
 function actualizarResultado() {
     const mensaje = msje.value;
     if (mensaje === '') {
-        location.reload();
+        location.reload(); 
     } else {
         textareaResultado.textContent = mensajeVisualizado;
         noMensaje.style.display = 'none';
