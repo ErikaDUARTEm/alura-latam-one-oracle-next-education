@@ -61,6 +61,18 @@ function encriptado() {
 
 btnDesencriptar.addEventListener('click', desencriptado)
 
+const llaves = new Map();
+// Se agregan pares clave-valor al mapa 'llaves'
+llaves.set('ai', 'a');
+llaves.set('enter', 'e');
+llaves.set('imes', 'i');
+llaves.set('ober', 'o');
+llaves.set('ufat', 'u');
+function replacer(match) {
+    // Retorna el valor asociado a la clave proporcionada desde el mapa 'llaves'
+    return llaves.get(match);
+}
+
 function desencriptado (){
     const mensaje = msje.value;
     let mDesencriptado = '';
@@ -68,32 +80,21 @@ function desencriptado (){
         noMensaje.style.display = 'flex';
         contenedorEncriptado.style.display = 'none';
     } else{
-        const palabrasEncriptadas = mensaje.split(' ')
-            for (let i = 0; i < palabrasEncriptadas.length; i++) {
-                    if(palabrasEncriptadas[i]=== 'enter'){
-                        console.log(palabrasEncriptadas[i])
-                        mDesencriptado += 'e';
-                    }else if(palabrasEncriptadas[i] === 'imes'){
-                        mDesencriptado += 'i';
-                    } else if(palabrasEncriptadas[i] === 'ai'){
-                        mDesencriptado += 'a';
-                    } else if(palabrasEncriptadas[i] === 'ober'){
-                        mDesencriptado += 'o';
-                    } else if(palabrasEncriptadas[i] === 'ufat'){
-                        mDesencriptado += 'u';
+        const regex = /enter|imes|ai|ober|ufat/g
+        
+                    if (mensaje.match(regex)){
+                        mDesencriptado += mensaje.replaceAll(/enter|imes|ai|ober|ufat/g, replacer)
                     } else{
-                    mDesencriptado += palabrasEncriptadas[i];
-
+                    mDesencriptado += mensaje[i];
                     }
-                    if (i < palabrasEncriptadas.length - 1) {
-                        mDesencriptado += ' ';
-                    }
+                   
             }
+            console.log(mDesencriptado)
             mensajeVisualizado = mDesencriptado;
-            textareaResultado.innerHTML = mensajeVisualizado;
+            textareaResultado.textContent = mensajeVisualizado;
             noMensaje.style.display = 'none';
             contenedorEncriptado.style.display = 'flex';
-    }
+    
 }
 
 
