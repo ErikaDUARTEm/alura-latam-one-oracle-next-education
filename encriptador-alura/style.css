@@ -17,31 +17,34 @@ header{
 }
 .sections-mensajes{
     display: flex;
+    height: 75vh;
     justify-content: space-evenly;
 }
 
 .section-encriptar{
     width: 60%;
     padding: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-.section-encriptar textarea{
+textarea{
     width: 100%;
-    height: 65%;
+    height: 70%;
     background: #F4ECF7;
-    border-color: #F4ECF7;
+    border-color: transparent;
     resize: none;
-    padding: 30px;
     font-size: 30px;
     box-sizing: content-box;
 }
-.encriptar-mensaje::placeholder{
-    text-align:center;
-    line-height: 100px;
-    font-size: 32px;
-}
+
 .encriptar-mensaje{
     width: 100%;
     height: 80%;
+}
+.encriptar-mensaje::placeholder{
+    font-size: 30px;
 }
 .encriptar-mensaje:focus{
     outline: none;
@@ -81,9 +84,9 @@ header{
 }
 .section-desencriptar{
     width:400px;
-    height:600px;
     background: white;
     border-radius: 32px;
+    box-shadow: 5px 10px 15px 1px #888888;
     
 }
 .no-mensaje{
@@ -136,5 +139,77 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 57px;
+    height: 10vh;
+}
+@media screen and (min-width: 768px) and (max-width: 1120px){
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .sections-mensajes{
+        width: 90%;
+        height: 100vh;
+        flex-direction: column;
+    }
+    .section-encriptar{
+        width: auto;
+        height: 30vh;
+     
+    }
+    .encriptar-mensaje{
+        width: auto;
+        
+    }
+    .icono{
+        display: flex;
+        align-self: self-start;
+    }
+   .no-mensaje > img{
+    display: none;
+   }
+    .content-buttons{
+        align-items: center;
+    }
+    .section-desencriptar{
+        width: auto;
+        height: auto;
+    }
+    footer{
+        display: none; 
+    }
+  }
+
+@media screen and (max-width: 767px){
+   header{
+    padding: 10px;
+   }
+    .title-principal{
+        font-size: 20px;
+    }
+    .sections-mensajes{
+        flex-direction: column;
+    }
+    .section-encriptar {
+        width: auto;
+        height: 65%;
+    }
+    .encriptar-mensaje::placeholder{
+        font-size: 20px;
+    }
+    .no-mensaje > img{
+        display: none;
+    }
+    .buttons{
+        width: auto;
+        flex-direction: column;
+    }
+    .section-desencriptar{
+        width: auto;
+        height: auto;
+    }
+    .btn-copiar, .btn-desencriptar, .btn-encriptar{
+        width: 279px;
+    }
 }
