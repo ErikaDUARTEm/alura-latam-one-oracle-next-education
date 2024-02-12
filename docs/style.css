@@ -60,7 +60,7 @@ textarea{
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 4px;
+    gap: 2px;
     font-weight: bold;
 }
 
@@ -78,6 +78,10 @@ textarea{
     border-radius:24px;
     background: #581845;
     color:white;
+    -webkit-border-radius:24px;
+    -moz-border-radius:24px;
+    -ms-border-radius:24px;
+    -o-border-radius:24px;
 }
 .btn-desencriptar{
     background: #58184588;
@@ -87,23 +91,23 @@ textarea{
     background: white;
     border-radius: 32px;
     box-shadow: 5px 10px 15px 1px #888888;
-    
-}
-.no-mensaje{
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    -webkit-border-radius: 32px;
+    -moz-border-radius: 32px;
+    -ms-border-radius: 32px;
+    -o-border-radius: 32px;
 }
 
 .mensaje-no-encontrado{
     font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
+    margin: 10px;
 }
 .mensaje-instrucciones{
-    font-size: 16px;
+    font-size: 12px;
     color:#58184588;
     text-align: center;
+    margin:10px;
 }
 .resultado-encriptado{
     width: 100%;
@@ -122,6 +126,10 @@ textarea{
     padding: 20px;
     font-size: 20px;
     border-color: transparent;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
 .desencriptar-mensaje:focus{
     outline: none;
